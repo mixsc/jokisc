@@ -1,3 +1,4 @@
+#!/bin/bash
 #Deobfuscated By xNot_Found
 #Github : https://github.com/hatakecnk
 vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
