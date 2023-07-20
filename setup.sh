@@ -1,3 +1,4 @@
+#!/bin/bash
 #Deobfuscated By xNot_Found
 #Github : https://github.com/hatakecnk
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
