@@ -123,7 +123,7 @@ commonname=ArzVpn
 email=admin@arzvip.site
 
 # simple password minimal
-wget -q -O /etc/pam.d/common-password "https://raw.githubusercontent.com/mixsc/agoez/main/tools/password"
+wget -q -O /etc/pam.d/common-password "https://raw.githubusercontent.com/mixsc/jokisc/main/tools/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
