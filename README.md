@@ -1,13 +1,22 @@
 # Wings XRAY V2
-<pre><code>apt update && apt upgrade -y && update-grub && sleep 2 && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt upgrade && apt install -y bzip2 gzip coreutils screen curl unzip && wget -q https://raw.githubusercontent.com/mixsc/jokisc/main/setup.sh && chmod +x setup.sh && ./setup.sh</code></pre>
+### UPDATE DULU BRO [ DEBIAN ]
+<pre><code>apt update -y && apt upgrade -y && apt dist-upgrade -y && reboot</code></pre>
+
+### UPDATE DULU BRO [ UBUNTU ]
+<pre><code>apt update && apt upgrade -y && update-grup && reboot</code></pre>
+
+### INSTALLER
+<pre><code>sysctl-w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt upgrade && apt install -y bzip2 gzip coreutils screen curl unzip && wget -q https://raw.githubusercontent.com/mixsc/jokisc/main/setup.sh && chmod +x setup.sh && ./setup.sh</code></pre>
 
 ## HARGA AUTOSCRIPT
 ### _1 Bulan 10k_
-### _Lifetime 2x ganti ip 40K_
+### _3 bulan 25k_
+### _Lifetime 1x ganti ip 40K_
+### _Lifetime 5x ganti ip 60k_
 ### _Source script 250k_
 
 ## Silahkan Hubungi
-### https://wa.me/6282261333421
+### https://wa.me/me
 
 ## ⏩ AUTOSCRIPT WEBSOCKET MULTIPORT 443 DETAILS ⏪
 ### Support Vmess Multipath <br> 
