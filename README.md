@@ -13,7 +13,7 @@
 ### _3 bulan 25k_
 ### _Lifetime 1x ganti ip 40K_
 ### _Lifetime 5x ganti ip 60k_
-### _Source script 250k_
+### _Source script_ ### 200k
 
 ## Silahkan Hubungi
 ### https://wa.me/me
