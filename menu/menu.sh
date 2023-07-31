@@ -233,7 +233,7 @@ DATE=$(date +'%d %B %Y')
 datediff() {
     d1=$(date -d "$1" +%s)
     d2=$(date -d "$2" +%s)
-   echo -e " ${PURPLE}│$NC  Expiry In     :${IGreen} $EXP$NC ($r $certifacate ${NC}Days )"
+   echo -e " ${PURPLE}│$NC  Expiry In     :${IGreen} $exp$NC ($r $certifacate ${NC}Days )"
 }
 mai="datediff "$Exp" "$DATE""
 echo -e " ${BIBlue}┌─────────────────────────────────────────────────────┐${NC}"
