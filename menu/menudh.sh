@@ -24,6 +24,8 @@ datediff() {
 }
 mai="datediff "$Exp" "$DATE""
 #
+valid=$(curl https://raw.githubusercontent.com/mixsc/permission/main/ip | grep $MYIP | awk '{print $3}')
+today=`date -d "0 days" +"%Y-%m-%d"`
 ########
 r="\033[1;31m"  #REDTERANG
 ###########
