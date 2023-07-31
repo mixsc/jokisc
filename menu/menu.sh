@@ -229,9 +229,6 @@ echo -e "${PURPLE} └───────────────────�
 echo -e "${PURPLE} ┌─────────────────────────────────────────────────────┐${NC}" 
 echo -e "${PURPLE} │  ${BIGreen}     HARI ini${NC}: ${red}$ttoday$NC ${BIGreen}KEMARIN${NC}: ${red}$tyest$NC ${BIGreen}BULAN${NC}: ${red}$tmon$NC $NC" 
 echo -e "${PURPLE} └─────────────────────────────────────────────────────┘${NC}"
-echo -e " ${PURPLE}│$NC  Expiry In     :${IGreen} $exp$NC ($r $certifacate ${NC}Days )"
-}
-mai="datediff "$Exp" "$DATE""
 echo -e " ${BIBlue}┌─────────────────────────────────────────────────────┐${NC}"
 echo -e " ${BIBlue}│  Version       :${BIWhite} $(cat /opt/.ver) Last Update ${NC}"
 echo -e " ${BIBlue}│  User          :\033[1;36m $Name \e[0m"
