@@ -1,16 +1,31 @@
 #!/bin/bash
 # ========================================= 
-vlx=$(grep -c -E "^#& " "/etc/xray/config.json") 
-let vla=$vlx/2 
-vmc=$(grep -c -E "^### " "/etc/xray/config.json") 
-let vma=$vmc/2 
-ssh1="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)" 
-
-trx=$(grep -c -E "^#! " "/etc/xray/config.json") 
-let tra=$trx/2 
-ssx=$(grep -c -E "^## " "/etc/xray/config.json") 
+#INFOAKUN
+vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
+let vla=$vlx/2
+vmc=$(grep -c -E "^### " "/etc/xray/config.json")
+let vma=$vmc/2
+ssh1="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
+trx=$(grep -c -E "^#! " "/etc/xray/config.json")
+let trb=$trx/2
+ssx=$(grep -c -E "^## " "/etc/xray/config.json")
 let ssa=$ssx/2
 #
+# CERTIFICATE STATUS
+d1=$(date -d "$valid" +%s)
+d2=$(date -d "$today" +%s)
+certifacate=$(((d1 - d2) / 86400))
+# VPS Information
+DATE=$(date +'%Y-%m-%d')
+datediff() {
+    d1=$(date -d "$1" +%s)
+    d2=$(date -d "$2" +%s)
+    echo -e "$COLOR1 $NC Expiry In   : $(( (d1 - d2) / 86400 )) Days"
+}
+mai="datediff "$Exp" "$DATE""
+#
+########
+r="\033[1;31m"  #REDTERANG
 ###########
 KANAN="\033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m$NC"
 KIRI="\033[1;32m>\033[1;33m>\033[1;31m>\033[1;31m$NC"
