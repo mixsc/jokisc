@@ -217,7 +217,7 @@ echo -e " ${PURPLE}│  ${PURPLE}  IP-VPS         : ${BIGreen}$IPVPS${NC}"
 echo -e " ${PURPLE}│  ${PURPLE}  ISP-Name       : ${BIGreen}$ISP${NC}"
 echo -e " ${PURPLE}│  ${BIGreen}  DATE&TIME      : $( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"
 echo -e " ${PURPLE}└─────────────────────────────────────────────────────┘${NC}"
-echo -e "                ${KIRI} ${purple}INFORMATION ACCOUNT${NC} ${KANAN}
+echo -e "                ${KIRI} ${purple}INFORMATION ACCOUNT${NC} ${KANAN}"
 echo -e "${PURPLE} ┌─────────────────────────────────────────────────────┐${NC}" 
 echo -e "${PURPLE} │ \033[0m ${BOLD}${PURPLE}     SSH      VMESS       VLESS      TROJAN $NC" 
 echo -e "${PURPLE} │ \033[0m ${Blue}      $ssh1         $vma           $vla          $tra $NC" 
