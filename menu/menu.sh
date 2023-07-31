@@ -1,15 +1,20 @@
 #!/bin/bash
- # ========================================= 
- vlx=$(grep -c -E "^#& " "/etc/xray/config.json") 
- let vla=$vlx/2 
- vmc=$(grep -c -E "^### " "/etc/xray/config.json") 
- let vma=$vmc/2 
- ssh1="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)" 
-  
- trx=$(grep -c -E "^#! " "/etc/xray/config.json") 
- let tra=$trx/2 
- ssx=$(grep -c -E "^## " "/etc/xray/config.json") 
- let ssa=$ssx/2
+# ========================================= 
+vlx=$(grep -c -E "^#& " "/etc/xray/config.json") 
+let vla=$vlx/2 
+vmc=$(grep -c -E "^### " "/etc/xray/config.json") 
+let vma=$vmc/2 
+ssh1="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)" 
+
+trx=$(grep -c -E "^#! " "/etc/xray/config.json") 
+let tra=$trx/2 
+ssx=$(grep -c -E "^## " "/etc/xray/config.json") 
+let ssa=$ssx/2
+#
+###########
+KANAN="\033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m$NC"
+KIRI="\033[1;32m>\033[1;33m>\033[1;31m>\033[1;31m$NC"
+###########
 BIBlack='\033[1;90m'      # Black
 BIRed='\033[1;91m'        # Red
 BIGreen='\033[1;92m'      # Green
@@ -185,25 +190,26 @@ echo -e " ${PURPLE}│  ${PURPLE}  IP-VPS         : ${BIGreen}$IPVPS${NC}"
 echo -e " ${PURPLE}│  ${PURPLE}  ISP-Name       : ${BIGreen}$ISP${NC}"
 echo -e " ${PURPLE}│  ${BIGreen}  DATE&TIME      : $( date -d "0 days" +"%d-%m-%Y | %X" ) ${NC}"
 echo -e " ${PURPLE}└─────────────────────────────────────────────────────┘${NC}"
+echo -e "                ${KIRI} ${purple}INFORMATION ACCOUNT${NC} ${KANAN}
 echo -e "${PURPLE} ┌─────────────────────────────────────────────────────┐${NC}" 
 echo -e "${PURPLE} │ \033[0m ${BOLD}${PURPLE}     SSH      VMESS       VLESS      TROJAN $NC" 
 echo -e "${PURPLE} │ \033[0m ${Blue}      $ssh1         $vma           $vla          $tra $NC" 
 echo -e "${PURPLE} └─────────────────────────────────────────────────────┘${NC}" 
-
+echo -e "                ${KIRI} ${purple}INFORMATION SERVICE${NC} ${KANAN}"
 echo -e " ${BIPurple}    SSH ${NC}: $ressh"" ${BIPurple} NGINX ${NC}: $resngx"" ${BIPurple}  XRAY ${NC}: $resv2r"" ${BIPurple} TROJAN ${NC}: $resv2r"
 echo -e " ${BIPurple}            DROPBEAR ${NC}: $resdbr" "${BIPurple} SSH-WS ${NC}: $ressshws"
 echo -e "${PURPLE} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "  ${PURPLE}  [${BIGreen}1${PURPLE}]${GREEN} SSH/UDP/SlowDNS ${NC}" 
-echo -e "  ${PURPLE}  [${BIGreen}2${PURPLE}]${GREEN} VMESS ${NC}"    
-echo -e "  ${PURPLE}  [${BIGreen}3${PURPLE}]${GREEN} VLESS ${NC}"    
-echo -e "  ${PURPLE}  [${BIGreen}4${PURPLE}]${GREEN} TROJAN ${NC}" 
-echo -e "  ${PURPLE}  [${BIGreen}5${PURPLE}]${GREEN} SHADOWSOCKS ${NC}"    
-echo -e "  ${PURPLE}  [${BIGreen}6${PURPLE}]${GREEN} BACKUP/RESTORE ${NC}"    
-echo -e "  ${PURPLE}  [${BIGreen}7${PURPLE}]${GREEN} SETTINGS ${NC}"    
-echo -e "  ${PURPLE}  [${BIGreen}8${PURPLE}]${GREEN} INFO SCRIPT ${NC}"  
-echo -e "  ${PURPLE}  [${BIGreen}9${PURPLE}]${GREEN} INFO SERVER ${NC}"    
-echo -e "  ${PURPLE}  [${BIGreen}10${PURPLE}]${GREEN}INSTAL UDP ${NC}" 
-echo -e "  ${PURPLE}  [${BIGreen}x${PURPLE}]${GREEN} EXIT ${NC}"  
+echo -e "  ${PURPLE}  [${BIGreen}1${PURPLE}]${BIWhite} SSH/UDP/SlowDNS ${NC}" 
+echo -e "  ${PURPLE}  [${BIGreen}2${PURPLE}]${BIWhite} VMESS ${NC}"    
+echo -e "  ${PURPLE}  [${BIGreen}3${PURPLE}]${BIWhite} VLESS ${NC}"    
+echo -e "  ${PURPLE}  [${BIGreen}4${PURPLE}]${BIWhite} TROJAN ${NC}" 
+echo -e "  ${PURPLE}  [${BIGreen}5${PURPLE}]${BIWhite} SHADOWSOCKS ${NC}"    
+echo -e "  ${PURPLE}  [${BIGreen}6${PURPLE}]${BIWhite} BACKUP/RESTORE ${NC}"    
+echo -e "  ${PURPLE}  [${BIGreen}7${PURPLE}]${BIWhite} SETTINGS ${NC}"    
+echo -e "  ${PURPLE}  [${BIGreen}8${PURPLE}]${BIWhite} INFO SCRIPT ${NC}"  
+echo -e "  ${PURPLE}  [${BIGreen}9${PURPLE}]${BIWhite} INFO SERVER ${NC}"    
+echo -e "  ${PURPLE}  [${BIGreen}10${PURPLE}]${BIWhite}INSTAL UDP ${NC}" 
+echo -e "  ${PURPLE}  [${BIGreen}x${PURPLE}]${BIWhite} EXIT ${NC}"  
 echo -e "${PURPLE} └─────────────────────────────────────────────────────┘${NC}"
  echo -e "${PURPLE} ┌─────────────────────────────────────────────────────┐${NC}" 
  echo -e "${PURPLE} │  ${BIGreen}     HARI ini${NC}: ${red}$ttoday$NC ${BIGreen}KEMARIN${NC}: ${red}$tyest$NC ${BIGreen}BULAN${NC}: ${red}$tmon$NC $NC" 
@@ -212,19 +218,19 @@ DATE=$(date +'%d %B %Y')
 datediff() {
     d1=$(date -d "$1" +%s)
     d2=$(date -d "$2" +%s)
-   echo -e " ${PURPLE}│$NC  Expiry In     : $(( (d1 - d2) / 86400 )) Days $NC"
+   echo -e " ${PURPLE}│$NC  Expiry In     :${BIWhite} $(( (d1 - d2) / 86400 )) Days $NC"
 }
 mai="datediff "$Exp" "$DATE""
-echo -e " ${PURPLE}┌─────────────────────────────────────────────────────┐${NC}"
-echo -e " ${PURPLE}│  Version       : $(cat /opt/.ver) Last Update ${NC}"
-echo -e " ${PURPLE}│  User          :\033[1;36m $Name \e[0m"
+echo -e " ${BIBlue}┌─────────────────────────────────────────────────────┐${NC}"
+echo -e " ${BIBlue}│  Version       :${BIWhite} $(cat /opt/.ver) Last Update ${NC}"
+echo -e " ${BIBlue}│  User          :\033[1;36m $Name \e[0m"
 if [ $exp \< 1000 ];
 then
-echo -e " ${PURPLE}│$NC License     :${PURPLE}$sisa_hari$NC Days Tersisa $NC"
+echo -e " ${BIBlue}│$NC License     :${PURPLE}$sisa_hari$NC Days Tersisa $NC"
 else
     datediff "$Exp" "$DATE"
 fi;
-echo -e " ${PURPLE}└─────────────────────────────────────────────────────┘${NC}"
+echo -e " ${BIBlue}└─────────────────────────────────────────────────────┘${NC}"
 echo
 read -p " Select menu : " opt
 echo -e ""
