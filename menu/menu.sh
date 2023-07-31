@@ -244,7 +244,7 @@ echo -e "${PURPLE} └───────────────────�
 echo -e " ${BIBlue}┌─────────────────────────────────────────────────────┐${NC}"
 echo -e " ${BIBlue}│  Version       :${BIWhite} $(cat /opt/.ver) Last Update ${NC}"
 echo -e " ${BIBlue}│  User          :\033[1;36m $Name \e[0m"
-echo -e " ${BIBlue}│  Expiry In     :$Blue=$green $exp$NC ($r $certifacate ${NC}Days )"
+echo -e " ${BIBlue}│  Expiry In     :$Blue=$green $exp ($r $certifacate Days )"
 echo -e " ${BIBlue}└─────────────────────────────────────────────────────┘${NC}"
 echo
 read -p " Select menu : " opt
