@@ -226,25 +226,16 @@ echo -e "  ${PURPLE}  [${BIGreen}9${PURPLE}]${BIWhite} INFO SERVER ${NC}"
 echo -e "  ${PURPLE}  [${BIGreen}10${PURPLE}]${BIWhite}INSTAL UDP ${NC}" 
 echo -e "  ${PURPLE}  [${BIGreen}x${PURPLE}]${BIWhite} EXIT ${NC}"  
 echo -e "${PURPLE} └─────────────────────────────────────────────────────┘${NC}"
- echo -e "${PURPLE} ┌─────────────────────────────────────────────────────┐${NC}" 
- echo -e "${PURPLE} │  ${BIGreen}     HARI ini${NC}: ${red}$ttoday$NC ${BIGreen}KEMARIN${NC}: ${red}$tyest$NC ${BIGreen}BULAN${NC}: ${red}$tmon$NC $NC" 
- echo -e "${PURPLE} └─────────────────────────────────────────────────────┘${NC}"
-DATE=$(date +'%d %B %Y')
-datediff() {
-    d1=$(date -d "$1" +%s)
-    d2=$(date -d "$2" +%s)
-   echo -e " ${PURPLE}│$NC  Expiry In     :${IGreen} $exp$NC ($r $certifacate ${NC}Days )"
+echo -e "${PURPLE} ┌─────────────────────────────────────────────────────┐${NC}" 
+echo -e "${PURPLE} │  ${BIGreen}     HARI ini${NC}: ${red}$ttoday$NC ${BIGreen}KEMARIN${NC}: ${red}$tyest$NC ${BIGreen}BULAN${NC}: ${red}$tmon$NC $NC" 
+echo -e "${PURPLE} └─────────────────────────────────────────────────────┘${NC}"
+echo -e " ${PURPLE}│$NC  Expiry In     :${IGreen} $exp$NC ($r $certifacate ${NC}Days )"
 }
 mai="datediff "$Exp" "$DATE""
 echo -e " ${BIBlue}┌─────────────────────────────────────────────────────┐${NC}"
 echo -e " ${BIBlue}│  Version       :${BIWhite} $(cat /opt/.ver) Last Update ${NC}"
 echo -e " ${BIBlue}│  User          :\033[1;36m $Name \e[0m"
-if [ $exp \< 1000 ];
-then
-echo -e " ${BIBlue}│$NC License     :${PURPLE}$sisa_hari$NC Days Tersisa $NC"
-else
-    datediff "$Exp" "$DATE"
-fi;
+echo -e " ${BIBlue}│  Expiry In     :${IGreen} $Exp$NC ($r $certifacate ${NC}Days )"
 echo -e " ${BIBlue}└─────────────────────────────────────────────────────┘${NC}"
 echo
 read -p " Select menu : " opt
