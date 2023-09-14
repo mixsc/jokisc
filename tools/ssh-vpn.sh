@@ -130,7 +130,7 @@ chmod +x /etc/pam.d/common-password
 cd
 
 # Getting websocket dropbear
-wget -q -O /usr/local/bin/ws-dropbear "https://raw.githubusercontent.com/arzvpn/Arzv/main/tools/ws-dropbear"
+wget -q -O /usr/local/bin/ws-dropbear "https://raw.githubusercontent.com/mixsc/jokisc/main/tools/ws-dropbear"
 chmod +x /usr/local/bin/ws-dropbear
 
 # Installing Service
