@@ -153,10 +153,10 @@ Restart=on-failure
 WantedBy=multi-user.target
 END
 
-#systemctl daemon-reload >/dev/null 2>&1
-#systemctl enable ws-dropbear >/dev/null 2>&1
-#systemctl start ws-dropbear >/dev/null 2>&1
-#systemctl restart ws-dropbear >/dev/null 2>&1
+systemctl daemon-reload >/dev/null 2>&1
+systemctl enable ws-dropbear >/dev/null 2>&1
+systemctl start ws-dropbear >/dev/null 2>&1
+systemctl restart ws-dropbear >/dev/null 2>&1
 
 clear 
 
